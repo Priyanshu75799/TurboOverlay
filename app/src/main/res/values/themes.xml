@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.TurboOverlay" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Main system colors -->
+        <item name="colorPrimary">#4CAF50</item>
+        <item name="colorPrimaryVariant">#388E3C</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <!-- Secondary system colors -->
+        <item name="colorSecondary">#81C784</item>
+        <item name="colorSecondaryVariant">#66BB6A</item>
+        <item name="colorOnSecondary">#000000</item>
+
+        <item name="android:windowBackground">#121212</item>
+    </style>
+</resources>
