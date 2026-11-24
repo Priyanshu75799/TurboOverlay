@@ -1,32 +1,32 @@
-# TurboOverlay 🚀
+# TurboOverlay 
 
 **TurboOverlay** is a lightweight, high-performance, real-time system monitoring tool and game optimizer for Android devices. Powered by **Shizuku**, it displays critical hardware metrics in an intuitive floating overlay panel and applies universal performance ADB tweaks without requiring root access.
 
 ---
 
-## 🔥 Key Features
+## Key Features
 
-### 1. 🛡️ Automatic Shizuku Detection & Direct Permission Popup
+### 1. Automatic Shizuku Detection & Direct Permission Popup
 - **Instant Service Detection**: Automatically detects active Shizuku background service on app launch or resume.
 - **Direct Permission Dialog**: Automatically prompts the native Shizuku permission dialog inside the app—no need to switch to the Shizuku app manually.
 - **Rootless Elevated Privileges**: Uses AIDL binder interface for secure, low-overhead shell execution.
 
-### 2. ⚡ Real-Time CPU Monitoring & Per-Core Frequency Analyzer
+### 2. Real-Time CPU Monitoring & Per-Core Frequency Analyzer
 - **CPU Load Graph**: Real-time total CPU utilization percentage (0–100%) with custom canvas graph rendering and history buffering.
 - **Per-Core Clock Frequencies**: Displays live frequencies for Cores 0 through 7 in **MHz** and **GHz**.
 - **Universal Core Engine**: Multi-path sysfs fallback (`scaling_cur_freq`, `cpuinfo_cur_freq`, batch `cat` execution) with automatic core online/offline state detection.
 
-### 3. 🔋 Battery & Power Consumption Analytics
+### 3. Battery & Power Consumption Analytics
 - **Live Temperature Graph**: Real-time battery thermal monitoring (°C).
 - **Power Draw Readout**: Real-time Voltage (V), Current (mA), and Power consumption in Watts (W).
 - **Charging State Intelligence**: Automatically adjusts current direction and power draw calculations based on charging status.
 
-### 4. 🌐 Network Speed & Ping Latency Tracker
+### 4. Network Speed & Ping Latency Tracker
 - **Real-Time Bandwidth**: Live Download and Upload rates in KB/s, MB/s, and Mbps.
 - **Ping Latency (ms)**: Real-time network latency ping indicator designed for lag-free online gaming (BGMI, Free Fire, PUBG, Call of Duty, Mobile Legends).
 - **Signal Strength**: Real-time cellular/Wi-Fi signal strength in dBm.
 
-### 5. 🎮 Universal Game Performance Optimizer & ADB Commands
+### 5. Universal Game Performance Optimizer & ADB Commands
 - **One-Tap Performance Boost**:
   - Compacts background memory (`cmd activity compaction perform`).
   - Trims system RAM and kills cached background processes (`am trim-memory`, `am kill-all`).
@@ -38,19 +38,19 @@
 - **100% Universal Device Support**:
   - Fully compatible with Snapdragon, MediaTek Dimensity/Helio, Samsung Exynos, Google Tensor, Unisoc, Xiaomi MIUI/HyperOS, Realme UI, OneUI, ColorOS, OxygenOS, and Stock Android.
 
-### 6. 🪟 Interactive Floating Overlay Window
+### 6. Interactive Floating Overlay Window
 - **Floating Handle**: Edge-snapping draggable handle overlayable over any game or app.
 - **Compact Dashboard Panel**: Quick tabs for CPU Graph, Core Frequencies, Battery Metrics, Network Metrics, and Performance Controls.
 - **Gesture Controls**: Smooth swipe & tap gestures for hiding or expanding the monitor.
 - **Haptic Feedback**: Touch animations and tactile feedback on button interactions.
 
-### 7. 🔒 100% Private, Secure & Offline
+### 7. 100% Private, Secure & Offline
 - **Zero Internet Access**: Complete privacy with zero network calls, zero telemetry, and zero remote data collection.
 - **Lightweight Footprint**: Optimized background thread handlers for minimal CPU/battery usage while gaming.
 
 ---
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 1. **Android Version**: Android 8.0 (Oreo / API level 26) or higher.
 2. **Shizuku Service**: Installed and activated on your device.
@@ -63,7 +63,7 @@
 
 ---
 
-## 📖 How to Use the App (User Manual)
+## How to Use the App (User Manual)
 
 1. **Setup Permissions**:
    - Open **Shizuku** and ensure the service is running.
@@ -89,7 +89,7 @@
 
 ---
 
-## 🚀 How to Build & Run
+## How to Build & Run
 
 ### 1. Clone the repository
 ```bash
@@ -111,7 +111,7 @@ Output APK will be generated under `app/build/outputs/apk/`.
 
 ---
 
-## 🏗️ Technical Architecture
+## Technical Architecture
 
 - **Language**: Kotlin 2.1.0
 - **Build System**: Gradle 8.13.2 with Kotlin DSL (`build.gradle.kts`)
@@ -121,13 +121,7 @@ Output APK will be generated under `app/build/outputs/apk/`.
 
 ---
 
-## 📄 License
-
-This project is open-source under the **MIT License**. See [LICENSE](LICENSE) for details.
-
----
-
 ## 👨‍💻 Author & Maintainer
 
-Developed with ❤️ by **[Priyanshu75799](https://github.com/Priyanshu75799)**.
+Developed by **[Priyanshu75799](https://github.com/Priyanshu75799)**.
 If you like this project, please give it a ⭐ on GitHub!
