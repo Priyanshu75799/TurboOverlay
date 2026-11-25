@@ -3,7 +3,7 @@
 **TurboOverlay** is a lightweight, high-performance, real-time system monitoring tool and game optimizer for Android devices. Powered by **Shizuku**, it displays critical hardware metrics in an intuitive floating overlay panel and applies universal performance ADB tweaks without requiring root access.
 
 ---
-
+Version 1.3
 ## Key Features
 
 ### 1. Automatic Shizuku Detection & Direct Permission Popup
