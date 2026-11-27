@@ -7,6 +7,17 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
         tools:ignore="ForegroundServicePermission" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+        <package android:name="moe.shizuku.privileged.api" />
+    </queries>
 
     <application
         android:allowBackup="true"
@@ -24,7 +35,7 @@
             android:multiprocess="false" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".frontend.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.TurboOverlay">
             <intent-filter>
@@ -33,8 +44,18 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".frontend.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TurboOverlay" />
+
+        <activity
+            android:name=".frontend.UserManualActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TurboOverlay" />
+
         <service
-            android:name=".OverlayService"
+            android:name=".frontend.OverlayService"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="specialUse">
@@ -42,6 +63,8 @@
                 android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
                 android:value="Overlay for real-time device monitoring" />
         </service>
+
+
     </application>
 
 </manifest>

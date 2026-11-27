@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">TurboOverlay</string>
+    <string name="powered_by_phoenix">Powered by Phoenix Engine</string>
     <string name="shizuku_connected">Shizuku Connected</string>
     <string name="shizuku_disconnected">Shizuku Disconnected</string>
     <string name="floating_overlay_window">Floating Overlay Window</string>
@@ -7,7 +8,10 @@
     <string name="start_overlay">START OVERLAY</string>
     <string name="shizuku_status">Shizuku Status</string>
     <string name="checking">Checking&#8230;</string>
-    <string name="app_manual">App Specifications and User Manual\n\nOverview\nTurbo Overlay Monitor is a lightweight on-screen monitoring tool designed for gaming and performance-focused sessions. It shows key device health information in a compact floating panel without using any internet API, cloud service, account login, or external server.\n\nPrivacy\nThis app is built for local device monitoring. It does not require an internet connection, does not upload data, and does not use any online API key. All displayed information is read locally from the device while the app is running.\n\nService Status\nThe status panel at the top shows whether the required local service is connected. When the service is unavailable, action buttons remain disabled. When the service is connected and permission is granted, supported controls become available.\n\nOverlay Window\nTap Floating Overlay Window to start the floating monitor. Android may ask for Display over other apps permission. After permission is granted, a small transparent handle appears near the upper-left area of the screen.\n\nUsing the Overlay\nTap or swipe the handle to open the compact overlay panel. Use the Hide button inside the panel to close only the panel. The handle remains visible so the overlay can be opened again when needed.\n\nLive Monitoring\nThe overlay shows CPU load and battery temperature with frequent refreshes. The graph keeps a short recent history so the app stays lightweight during games.\n\nGraph Controls\nUse the chip icon to view CPU load. Use the battery icon to view battery temperature. Use the performance icon to open performance controls. The selected option is highlighted.\n\nPerformance Controls\nThe performance controls are intended to request a smoother gaming state from the device. Support may vary by Android version, manufacturer, and system policy. If a command is not supported, the app continues running normally.\n\nPerformance Per Minute\nThe repeat performance option reapplies the performance request at a fixed interval while enabled. Use it only during gaming or testing, and turn it off when it is no longer needed.\n\nUnavailable State\nIf the required service stops in the background, live values show N/A and protected controls are disabled until the service becomes available again.\n\nStop App\nStop App closes the overlay service and attempts to stop the app completely. Use it when you are done monitoring.</string>
+    <string name="back">Back</string>
+    <string name="app_manual_title">App Specifications &amp; User Manual</string>
+    <string name="app_manual">1. Overview &amp; Engine\nTurbo Overlay Monitor is powered by the Phoenix Engine. It is a lightweight, high-performance on-screen monitoring tool designed for gaming and hardware performance tracking. It displays critical system statistics in a compact, floating overlay window.\n\n2. 100% Privacy &amp; Local Execution\nThis app operates entirely locally on your device. It does not use any internet APIs, external cloud servers, background tracking, or user accounts. All system metrics and commands are processed locally on your phone.\n\n3. Shizuku Integration &amp; Permissions\nTap the Info (i) icon on the dashboard to open the Shizuku Status &amp; Permissions panel:\n- Shizuku Service: Grants elevated hardware reading and performance boost capabilities.\n- Battery Optimization Exemption: Keeps the overlay monitoring service active during intensive gaming.\n- Overlay Permission: Permits drawing the floating overlay panel over other apps.\nThe (i) symbol dynamically changes color:\n- Green: Shizuku service is connected and active.\n- Blue: All required permissions are granted, but Shizuku is offline.\n- Red: One or more permissions are missing.\n\n4. How to Use the Floating Overlay Window\nTap \'START OVERLAY\' to show the floating edge handle on your screen:\n- Edge Handle: Drag to position anywhere along screen edges. Swipe out or tap the handle to expand the floating monitoring panel.\n- CPU Tab (Chip Icon): View live CPU load percentage graph. Tap again to switch to the per-core frequencies grid (Cores 0-7 in MHz/GHz).\n- Battery Tab (Battery Icon): View real-time battery temperature graph, Voltage (V), Current (mA), and Power draw (W).\n- Network Tab (Speed Icon): View live Download/Upload speed, Ping Latency (ms), and Signal Strength (dBm).\n- Performance Tab (Bolt Icon): Tap Boost for instant performance tweaks. Toggle PM Mode for 1-minute auto performance boost repetition.\n- Hide Panel (Minimize Icon): Tap the minimize button or swipe towards the screen edge to collapse the dashboard back into the handle.\n\n5. Game Launcher Feature\nAdd your favorite games and apps to the built-in Game Launcher by tapping (+):\n- Select multiple apps at once and tap Done.\n- Launching a game automatically starts the Overlay Service (if Shizuku is connected) and applies Instant Performance Boost.\n- To remove any game or app from the Game Launcher, simply tap (+) to open \'Select Apps / Games\' and uncheck (unselect) that app, then tap Done.\n\n6. Protect Your Game Experience\nEnable this feature from Settings to safeguard your phone against thermal throttling and extreme load. When active, if CPU usage stays above 90% continuously for 20 seconds during overlay monitoring, the Overlay Service automatically stops itself to allow the device to cool down.\n\n7. Performance Boost &amp; Reset\nPerformance controls request maximum hardware responsiveness from the system. Each time the Overlay Service starts, all auto-repeat boost options reset to OFF by default for safety.\n\n8. Developer Contact\nDeveloped by Priyanshu Rajput. For feedback or support, email iampriyanshudeveloper@gmail.com or visit GitHub channel Priyanshu75799.</string>
+
     <string name="cpu_format">CPU: %1$d%%</string>
     <string name="voltage_format">Voltage: %1$s V</string>
     <string name="current_format">Current: %1$s mA</string>
@@ -37,10 +41,44 @@
     <string name="desc_repeat">Toggle performance per minute</string>
     <string name="notification_title">Turbo Overlay Active</string>
     <string name="optimizing_perf">Optimizing Performance...</string>
-    <string name="perf_boost_applied">⚡ Universal Performance Boost Applied!</string>
-    <string name="perf_auto_boost_applied">⚡ Auto Performance Boost Applied (1 Min)</string>
-    <string name="perf_pm_on">⚡ Performance PM: ON</string>
-    <string name="perf_pm_off">⚡ Performance PM: OFF</string>
+
+    <!-- Bottom Messages (Without Emojis) -->
+    <string name="perf_boost_applied">Universal Performance Boost Applied!</string>
+    <string name="perf_auto_boost_applied">Auto Performance Boost Applied (1 Min)</string>
+    <string name="perf_pm_on">Performance PM: ON</string>
+    <string name="perf_pm_off">Performance PM: OFF</string>
+    <string name="game_boost_applied">Performance Boost Applied for %1$s!</string>
+    <string name="lag_protection_stopped">Protect Your Game Experience: Overlay service stopped due to high CPU load (&gt;90%) for 20 seconds.</string>
+
     <string name="cpu_na">CPU: N/A</string>
     <string name="bat_na">Bat: N/A</string>
+
+    <!-- Settings & Features -->
+    <string name="settings">Settings</string>
+    <string name="protect_lag_title">Protect Your game experience</string>
+    <string name="protect_lag_desc">Automatically turns off overlay service if CPU load remains above 90% continuously for 20 seconds to prevent phone overheating and lagging.</string>
+    <string name="dev_info_title">Developer\'s Information</string>
+    <string name="dev_name_label">Developer Name:</string>
+    <string name="dev_name_val">Priyanshu Rajput</string>
+    <string name="dev_email_label">Email ID:</string>
+    <string name="dev_email_val">iampriyanshudeveloper@gmail.com</string>
+    <string name="dev_github_label">GitHub Channel Name:</string>
+    <string name="dev_github_val">Priyanshu75799</string>
+    <string name="dev_note">If you encounter any issues while using the app, please send an email to the provided Email ID. With your feedback, we will be able to improve the app in upcoming updates.</string>
+
+    <!-- Game Launcher -->
+    <string name="game_launcher">Game Launcher</string>
+    <string name="add_games_hint">No games added yet. Tap + to add games to launcher.</string>
+    <string name="select_apps">Select Apps / Games</string>
+    <string name="done">Done</string>
+
+    <!-- Shizuku / Permissions Pop-up -->
+    <string name="shizuku_permissions_title">Shizuku Status &amp; Permissions</string>
+    <string name="shizuku_perm_btn">Shizuku Permission</string>
+    <string name="shizuku_perm_desc">Allows high-priority hardware monitoring and privileged command execution.</string>
+    <string name="battery_opt_btn">Disable Battery Optimization</string>
+    <string name="battery_opt_desc">Prevents system from killing overlay background service during long gaming sessions.</string>
+    <string name="overlay_perm_btn">Overlay Permission</string>
+    <string name="overlay_perm_desc">Required to display floating monitor panel over games and apps.</string>
+    <string name="error_shizuku_not_found">Error 404: Shizuku Not Found</string>
 </resources>

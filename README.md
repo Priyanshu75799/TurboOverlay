@@ -1,9 +1,9 @@
-# TurboOverlay 
+# TurboOverlay
 
 **TurboOverlay** is a lightweight, high-performance, real-time system monitoring tool and game optimizer for Android devices. Powered by **Shizuku**, it displays critical hardware metrics in an intuitive floating overlay panel and applies universal performance ADB tweaks without requiring root access.
 
 ---
-Version 1.3
+
 ## Key Features
 
 ### 1. Automatic Shizuku Detection & Direct Permission Popup
@@ -26,25 +26,23 @@ Version 1.3
 - **Ping Latency (ms)**: Real-time network latency ping indicator designed for lag-free online gaming (BGMI, Free Fire, PUBG, Call of Duty, Mobile Legends).
 - **Signal Strength**: Real-time cellular/Wi-Fi signal strength in dBm.
 
-### 5. Universal Game Performance Optimizer & ADB Commands
-- **One-Tap Performance Boost**:
-  - Compacts background memory (`cmd activity compaction perform`).
-  - Trims system RAM and kills cached background processes (`am trim-memory`, `am kill-all`).
-  - Disables battery saver throttling & Doze idle mode (`cmd power set-fixed-performance-mode-enabled true`, `cmd deviceidle disable all`, `settings put global low_power 0`).
-- **Auto Performance Per Minute (PM Mode)**:
-  - Automatically re-applies universal performance ADB commands every 60 seconds while enabled to maintain peak FPS.
-- **Instant Toast Feedback**:
-  - Displays a clear bottom-screen toast message on every manual tap and every automatic per-minute boost execution.
-- **100% Universal Device Support**:
-  - Fully compatible with Snapdragon, MediaTek Dimensity/Helio, Samsung Exynos, Google Tensor, Unisoc, Xiaomi MIUI/HyperOS, Realme UI, OneUI, ColorOS, OxygenOS, and Stock Android.
+### 5. Protect Your Game Experience (Anti-Overheating Guard)
+- **Continuous Load Protection**: Accessible via Settings. Automatically turns off the overlay service if CPU load stays above 90% continuously for 20 seconds.
+- **Loophole-Free Monitoring**: Automatically resets the 20-second counter if CPU load drops below 90% at any point during monitoring.
+- **Vibrant Green Switch**: Features a sleek Material toggle switch that illuminates green when enabled (OFF by default on first install).
 
-### 6. Interactive Floating Overlay Window
+### 6. Built-in Game Launcher
+- **Quick Access**: Add your favorite games and apps to the launcher using the (+) dialog.
+- **Auto Boost & Launch**: Launching a game automatically starts the Overlay Monitoring Service and applies an instant performance boost.
+- **Easy Management**: Remove any game or app from the launcher anytime by unchecking it inside the (+) dialog.
+
+### 7. Interactive Floating Overlay Window
 - **Floating Handle**: Edge-snapping draggable handle overlayable over any game or app.
 - **Compact Dashboard Panel**: Quick tabs for CPU Graph, Core Frequencies, Battery Metrics, Network Metrics, and Performance Controls.
 - **Gesture Controls**: Smooth swipe & tap gestures for hiding or expanding the monitor.
 - **Haptic Feedback**: Touch animations and tactile feedback on button interactions.
 
-### 7. 100% Private, Secure & Offline
+### 8. 100% Private, Secure & Offline
 - **Zero Internet Access**: Complete privacy with zero network calls, zero telemetry, and zero remote data collection.
 - **Lightweight Footprint**: Optimized background thread handlers for minimal CPU/battery usage while gaming.
 
@@ -81,7 +79,6 @@ Version 1.3
    - **Performance Tab (Bolt Icon)**: 
      - Tap **Boost** for instant one-tap performance optimization.
      - Toggle **PM Mode (Performance Per Minute)** to automatically re-apply ADB performance tweaks every 60 seconds while gaming.
-     - A bottom toast notification will confirm whenever boost commands are executed.
    - **Hide Panel**: Tap the minimize icon or swipe towards the screen edge to collapse the dashboard back into the handle.
 
 4. **Stop the Service**:
@@ -111,13 +108,19 @@ Output APK will be generated under `app/build/outputs/apk/`.
 
 ---
 
-## Technical Architecture
+## ️ Technical Architecture
 
 - **Language**: Kotlin 2.1.0
 - **Build System**: Gradle 8.13.2 with Kotlin DSL (`build.gradle.kts`)
 - **Min SDK**: 26 | **Target SDK**: 35 (Android 15)
 - **Privilege & IPC**: [Shizuku API 13.1.5](https://github.com/RikkaApps/Shizuku) + Custom AIDL Service (`IPrivilegedShellService.aidl`)
 - **UI & Graphics**: Material Design 3, View Binding, Custom Canvas `GraphView`
+
+---
+
+## License
+
+This project is open-source under the **MIT License**. See [LICENSE](LICENSE) for details.
 
 ---
 
