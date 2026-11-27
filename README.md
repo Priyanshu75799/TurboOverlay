@@ -90,7 +90,7 @@
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/Priyanshu75799/TurboOverlays.git
+git clone https://github.com/Priyanshu75799/TurboOverlay.git
 cd TurboOverlays
 ```
 
