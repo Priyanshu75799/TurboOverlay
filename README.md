@@ -163,12 +163,31 @@ Actual resource consumption depends on device hardware, monitoring frequency, en
 
 ---
 
-## 9. 100% Private, Secure & Offline
+## 9. Privacy & Permissions
 
-- **No Internet Permission:** The application is designed to operate without internet connectivity.
-- **No Remote Telemetry:** No remote analytics or usage tracking is intended.
-- **Local Monitoring:** System metrics are processed locally on the device.
-- **Lightweight Footprint:** Monitoring operations are optimized to reduce unnecessary CPU and battery usage.
+TurboOverlay is designed to perform its monitoring and optimization operations locally on the Android device.
+
+### Privacy Overview
+
+- **No INTERNET Permission Declared:** The Android manifest does not request the `android.permission.INTERNET` permission.
+- **Local Device Monitoring:** CPU, battery, and other device metrics are processed locally.
+- **No Remote Analytics Claimed:** TurboOverlay is not designed around remote analytics or user-tracking services.
+- **Shizuku Integration:** Privileged shell operations are performed through Shizuku after the user grants permission.
+
+### Why Does TurboOverlay Request These Permissions?
+
+| Permission | Purpose |
+|---|---|
+| `SYSTEM_ALERT_WINDOW` | Displays the floating monitoring overlay above other apps. |
+| `QUERY_ALL_PACKAGES` | Supports visibility of installed applications for the built-in game launcher. |
+| `FOREGROUND_SERVICE` | Allows the monitoring service to run as a foreground service. |
+| `FOREGROUND_SERVICE_SPECIAL_USE` | Declares the special-use foreground service type for the overlay. |
+| `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS` | Supports the app's request for exemption from battery optimization. |
+| `moe.shizuku.manager.permission.API_V23` | Integrates with Shizuku for privileged operations. |
+
+TurboOverlay does not require root access. Shizuku must be running, and the user must explicitly grant the required permission before privileged operations can be performed.
+
+Permission availability and behaviour may vary across Android versions and device manufacturers.
 
 ---
 
@@ -254,7 +273,7 @@ Tap the red **STOP APP** button on the main screen to stop the floating overlay 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Priy​​anshu75799/TurboOverlay.git
+git clone https://github.com/Priyanshu75799/TurboOverlay.git
 cd TurboOverlay
 ```
 
