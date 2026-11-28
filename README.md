@@ -281,9 +281,9 @@ app/build/outputs/apk/
 ## Technical Architecture
 
 - **Language:** Kotlin 2.1.0
-- **Build System:** Gradle 8.13.2 with Kotlin DSL (`build.gradle.kts`)
-- **Minimum SDK:** 26
-- **Target SDK:** 35 (Android 15)
+- **Build System:** Android Gradle Plugin (AGP) 8.13.2 with Gradle Wrapper 9.4.1 and Kotlin DSL (`build.gradle.kts`)
+- **Minimum SDK:** 29 (Android 10)
+- **Target SDK:** 36 (Android 16)
 - **Privilege & IPC:** Shizuku API 13.1.5 with custom AIDL service (`IPrivilegedShellService.aidl`)
 - **UI & Graphics:** Material Design 3, View Binding, and custom Canvas `GraphView`
 
