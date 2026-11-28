@@ -169,7 +169,7 @@ TurboOverlay is designed to perform its monitoring and optimization operations l
 
 ### Privacy Overview
 
-- **No INTERNET Permission Declared:** The Android manifest does not request the `android.permission.INTERNET` permission.
+- **No Android INTERNET Permission Declared:** The app manifest does not request `android.permission.INTERNET`. However, the Network tab executes an ICMP ping command (`ping -c 1 -w 1 8.8.8.8`) through the Shizuku shell service. Therefore, the ping feature may communicate with an external network when active.   Network traffic statistics are read locally from `/proc/net/dev`.
 - **Local Device Monitoring:** CPU, battery, and other device metrics are processed locally.
 - **No Remote Analytics Claimed:** TurboOverlay is not designed around remote analytics or user-tracking services.
 - **Shizuku Integration:** Privileged shell operations are performed through Shizuku after the user grants permission.
